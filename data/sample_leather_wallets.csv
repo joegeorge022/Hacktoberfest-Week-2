@@ -1,0 +1,13 @@
+item_id,product_name,material_cost,labor_hours,competitor_avg_price,photo_count,is_custom_engraved,free_shipping,units_sold,conversion_rate,final_price
+1,Slim Horween Chromexcel Bifold,14.50,1.8,65.00,7,0,1,64,0.038,62.00
+2,Minimalist Cardholder Veg-Tan 4-Pocket,7.20,0.9,35.00,5,1,1,118,0.054,34.00
+3,Vintage Cognac Leather Passport Wallet,18.00,2.2,85.00,8,1,1,45,0.031,82.00
+4,Raw Edge EDC Snap Wallet,9.50,1.1,42.00,6,0,0,79,0.042,39.99
+5,Personalized Monogram Money Clip Cardholder,8.00,1.0,38.00,6,1,1,135,0.062,37.50
+6,Traditional Italian Buttero Long Wallet,26.00,3.5,120.00,9,1,1,28,0.024,115.00
+7,Pocket Coin Pouch Rustic Brown,6.00,0.7,28.00,4,0,0,94,0.046,26.50
+8,Pueblo Leather Front Pocket Wallet,11.50,1.4,52.00,7,0,1,88,0.048,49.00
+9,Rugged Field Notes Journal Cover,16.50,2.0,75.00,7,1,1,52,0.034,72.00
+10,Full Grain Leather Key Fob Organizer,3.50,0.4,18.00,5,1,0,160,0.067,16.50
+11,Cordovan Executive Card Case,28.00,2.5,145.00,8,1,1,22,0.021,139.00
+12,Heritage Waxed Canvas & Leather Bifold,12.00,1.5,58.00,6,0,1,70,0.040,55.00

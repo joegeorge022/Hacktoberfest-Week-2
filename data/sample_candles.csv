@@ -1,0 +1,21 @@
+item_id,product_name,material_cost,labor_hours,competitor_avg_price,photo_count,is_q4_holiday,free_shipping,units_sold,conversion_rate,final_price
+1,Amber & Oakmoss Soy Candle 8oz,4.50,0.5,24.00,6,1,1,142,0.048,22.50
+2,Lavender & French Vanilla Candle,4.20,0.5,22.00,5,0,1,98,0.039,19.99
+3,Campfire Smoke & Birch Wood Wick,5.10,0.7,28.00,7,1,0,165,0.052,26.00
+4,Eucalyptus Spa Meditation Candle,4.00,0.4,20.00,4,0,1,85,0.035,18.50
+5,Cinnamon Spiced Cider Autumn Batch,4.80,0.6,26.00,6,1,1,210,0.061,24.99
+6,Midnight Jasmine & Neroli Luxury Jar,6.20,0.8,32.00,8,0,1,72,0.031,29.99
+7,Sea Salt & Coconut Palm Summer Tin,3.80,0.4,18.00,5,0,0,115,0.044,17.50
+8,Smoked Honey & Bourbon Limited,5.50,0.7,29.00,7,1,1,180,0.058,27.50
+9,Wild Bergamot & Cedar Candle,4.60,0.5,23.00,5,0,1,104,0.041,21.00
+10,Pumpkin Harvest Trio Gift Set,11.20,1.2,55.00,9,1,1,88,0.046,52.00
+11,Matcha Tea & White Sage Ceramic,5.90,0.8,30.00,6,0,1,64,0.029,28.50
+12,Golden Tonka Bean & Tobacco,5.30,0.6,27.00,7,1,1,155,0.054,25.00
+13,Lemon Verbena Kitchen Candle,3.50,0.4,18.00,4,0,0,92,0.038,16.99
+14,Nordic Pine & Juniper Holiday Tin,4.90,0.6,25.00,7,1,1,195,0.059,23.50
+15,Sweet Fig & Amber Dusk Jar,4.70,0.5,24.00,6,0,1,110,0.042,22.00
+16,Warm Cashmere & Sandalwood,5.20,0.7,28.00,6,1,1,148,0.051,26.50
+17,Pink Grapefruit & Mint Sunrise,3.90,0.4,19.00,5,0,0,105,0.043,18.00
+18,Clove & Blood Orange Winter Glow,5.00,0.6,26.00,8,1,1,175,0.057,25.50
+19,Unscented Pure Beeswax Taper Pair,3.20,0.4,16.00,4,0,0,120,0.045,15.50
+20,Dark Chocolate Truffle Candle,5.40,0.7,27.00,6,1,1,130,0.049,24.50

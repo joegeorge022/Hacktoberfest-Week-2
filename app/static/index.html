@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HustlePulse AI | Open-Source AI Copilot for Indie Sellers & Side-Hustlers</title>
+  <meta name="description" content="An open-source AI copilot combining Google Gemma for high-converting listings, Prior Labs TabPFN for tabular dynamic pricing, and ElevenLabs for viral voice promos. Zero marginal token tax, 100% data privacy.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="brand-section">
+        <div class="brand-logo-badge">⚡</div>
+        <div class="brand-text">
+          <h1>HustlePulse AI</h1>
+          <p>Autonomous Open-Source AI Copilot for Indie Sellers & Side-Hustlers</p>
+        </div>
+      </div>
+
+      <div class="header-badges">
+        <span class="badge pulse-purple" title="Gemma 2 open-weight model integration">
+          <span class="status-dot"></span> Gemma 2
+        </span>
+        <span class="badge pulse-emerald" title="Prior Labs TabPFN tabular foundation model">
+          <span class="status-dot"></span> TabPFN-3.5
+        </span>
+        <span class="badge pulse-amber" title="ElevenLabs voice synthesis">
+          <span class="status-dot"></span> ElevenLabs
+        </span>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs" aria-label="Tool Navigation">
+      <button class="nav-tab-btn active" data-tab="listing" id="tab-btn-listing">
+        ✍️ Listing & SEO Studio
+      </button>
+      <button class="nav-tab-btn" data-tab="pricing" id="tab-btn-pricing">
+        📊 Dynamic Pricing (TabPFN)
+      </button>
+      <button class="nav-tab-btn" data-tab="voice" id="tab-btn-voice">
+        🎙️ Voice Promo Studio
+      </button>
+      <button class="nav-tab-btn" data-tab="open-innovation" id="tab-btn-open-innovation">
+        💡 Why Open AI Matters
+      </button>
+    </nav>
+
+    <!-- TAB 1: LISTING & SEO STUDIO (GEMMA) -->
+    <main>
+      <section id="tab-listing" class="tab-content active">
+        <div class="dashboard-grid">
+          <!-- Left: Input Form -->
+          <div class="glass-panel">
+            <div class="panel-header">
+              <h2 class="panel-title"><span>✨</span> Product Details</h2>
+              <span class="badge pulse-purple">Powered by Gemma 2</span>
+            </div>
+
+            <!-- Presets -->
+            <div class="form-group">
+              <label>Quick Presets</label>
+              <div class="preset-selector">
+                <button type="button" class="preset-chip listing-preset-chip active" data-preset="candles">🕯️ Soy Candle</button>
+                <button type="button" class="preset-chip listing-preset-chip" data-preset="leather">👝 Leather Wallet</button>
+                <button type="button" class="preset-chip listing-preset-chip" data-preset="digital">💻 Notion Template</button>
+              </div>
+            </div>
+
+            <form id="listing-generator-form">
+              <div class="form-group">
+                <label for="item-title">Product Title / Working Name</label>
+                <input type="text" id="item-title" value="Hand-Poured Amber & Oakmoss Soy Candle 8oz" required>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="item-category">Product Category</label>
+                  <input type="text" id="item-category" value="Home & Living / Candles" required>
+                </div>
+                <div class="form-group">
+                  <label for="item-platform">Target Marketplace</label>
+                  <select id="item-platform">
+                    <option value="Etsy">Etsy (Storytelling & Tags)</option>
+                    <option value="Shopify">Shopify (Brand & Features)</option>
+                    <option value="Amazon Handmade">Amazon Handmade (Specs & SEO)</option>
+                    <option value="TikTok Shop">TikTok Shop (Viral Hooks)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="item-materials">Materials & Specifications</label>
+                <textarea id="item-materials" rows="2" required>100% American Soy Wax, Premium Phthalate-Free Fragrance, Crackling Wooden Wick, Amber Glass Tumbler</textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="item-features">Key Standout Features</label>
+                <textarea id="item-features" rows="2" required>50-hour clean burn, artisanal small batch, notes of oakmoss, amber, and vetiver, reusable jar</textarea>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="item-audience">Target Buyer Persona</label>
+                  <input type="text" id="item-audience" value="Cozy home decor enthusiasts and lovers of warm botanical scents" required>
+                </div>
+                <div class="form-group">
+                  <label for="item-tone">Tone of Voice</label>
+                  <select id="item-tone">
+                    <option value="Artisan & Authentic">Artisan & Authentic</option>
+                    <option value="Luxury & Minimalist">Luxury & Minimalist</option>
+                    <option value="Playful & Quirky">Playful & Quirky</option>
+                    <option value="Punchy & Direct">Punchy & Direct</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="btn-generate-listing">
+                <span>✨ Generate High-Converting Listing</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Right: Generated Output Showcase -->
+          <div class="glass-panel" id="listing-output-section">
+            <div class="panel-header">
+              <h2 class="panel-title"><span>📋</span> Optimized Marketplace Listing</h2>
+              <div id="gemma-meta-info" class="badge">Engine: Gemma 2 | Ready</div>
+            </div>
+
+            <!-- Optimized Title -->
+            <div class="output-card">
+              <div class="output-card-title">
+                <span>Optimized Title (SEO Rich)</span>
+                <button type="button" class="copy-badge-btn copy-trigger" data-target="output-optimized-title">📋 Copy</button>
+              </div>
+              <div id="output-optimized-title" style="font-size: 1.05rem; font-weight: 600; color: #fff;">
+                Hand-Poured Amber & Oakmoss Soy Candle | Wooden Wick 8oz Glass Jar | Artisan Clean Burn Gift
+              </div>
+            </div>
+
+            <!-- Viral Hook & Persona -->
+            <div class="form-row" style="margin-bottom: 1.25rem;">
+              <div class="output-card" style="margin-bottom: 0;">
+                <div class="output-card-title">
+                  <span>Buyer Persona</span>
+                </div>
+                <div id="output-buyer-persona" style="font-size: 0.88rem; color: var(--text-muted);">
+                  Values-driven aesthetic consumer aged 25-45 seeking warm cozy home accents and sustainable gifts.
+                </div>
+              </div>
+              <div class="output-card" style="margin-bottom: 0;">
+                <div class="output-card-title">
+                  <span>Viral Video Hook (Reels/TikTok)</span>
+                  <button type="button" class="copy-badge-btn copy-trigger" data-target="output-video-hook">📋 Copy</button>
+                </div>
+                <div id="output-video-hook" style="font-size: 0.88rem; color: #67e8f9; font-weight: 500;">
+                  Stop scrolling if you love moody botanical scents—watch this crackling wooden wick in action!
+                </div>
+              </div>
+            </div>
+
+            <!-- Full Description -->
+            <div class="output-card">
+              <div class="output-card-title">
+                <span>Story & Product Description</span>
+                <button type="button" class="copy-badge-btn copy-trigger" data-target="output-description">📋 Copy</button>
+              </div>
+              <div id="output-description" style="font-size: 0.92rem; color: var(--text-main); white-space: pre-wrap; line-height: 1.6;">
+✨ The Story Behind The Piece
+Every candle is hand-poured in our studio in small micro-batches. Featuring custom-blended fragrance oils of golden amber, earthy oakmoss, and velvet vetiver.
+
+🌿 Materials & Mindful Craft
+• 100% natural, American-grown soy wax
+• FSC-certified crackling wooden wick
+• Clean, slow burn for 50+ fragrant hours
+• Reusable heavy amber apothecary tumbler
+
+📦 What’s In The Box
+• 1x 8oz Amber Candle with wooden lid
+• Candle care guide with wick trimming tips
+
+💬 A Note From Our Studio
+Thank you for supporting an independent maker! Your order directly supports handmade craft.
+              </div>
+            </div>
+
+            <!-- Key Feature Bullets -->
+            <div class="output-card">
+              <div class="output-card-title">
+                <span>Key Feature Highlights</span>
+              </div>
+              <ul id="output-bullets" style="padding-left: 1.2rem; font-size: 0.88rem; color: var(--text-muted);">
+                <li>100% Vegan Soy Wax with zero paraffin or synthetic additives.</li>
+                <li>Crackling Wooden Wick replicates a cozy fireside ambiance.</li>
+                <li>50+ Hour Slow Burn with clean scent dispersion.</li>
+              </ul>
+            </div>
+
+            <!-- 13 High-Traffic Tags -->
+            <div class="output-card">
+              <div class="output-card-title">
+                <span>13 High-Search-Intent Tags</span>
+                <button type="button" class="copy-badge-btn copy-trigger" data-target="output-tags-cloud">📋 Copy All</button>
+              </div>
+              <div class="tags-cloud" id="output-tags-cloud">
+                <span class="tag-item">soy candle gifts</span>
+                <span class="tag-item">amber oakmoss</span>
+                <span class="tag-item">wood wick candle</span>
+                <span class="tag-item">handmade home decor</span>
+                <span class="tag-item">aesthetic candle</span>
+                <span class="tag-item">botanical scent</span>
+                <span class="tag-item">gift for her</span>
+                <span class="tag-item">cozy autumn decor</span>
+                <span class="tag-item">sustainable candle</span>
+                <span class="tag-item">apothecary jar</span>
+                <span class="tag-item">clean burning</span>
+                <span class="tag-item">aromatherapy relaxation</span>
+                <span class="tag-item">small batch maker</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: DYNAMIC PRICING (TABPFN) -->
+      <section id="tab-pricing" class="tab-content">
+        <div class="dashboard-grid">
+          <!-- Left: Pricing Input & Tabular Selection -->
+          <div class="glass-panel">
+            <div class="panel-header">
+              <h2 class="panel-title"><span>📊</span> Tabular Data & Pricing Predictor</h2>
+              <span class="badge pulse-emerald">Prior Labs TabPFN-3.5</span>
+            </div>
+
+            <form id="pricing-predict-form">
+              <div class="form-group">
+                <label for="pricing-dataset-select">Historical Shop Dataset</label>
+                <select id="pricing-dataset-select"></select>
+              </div>
+
+              <!-- Custom File Upload Container -->
+              <div class="form-group" id="custom-upload-group" style="display: none;">
+                <label for="csv-file-upload">Upload Store Sales History (CSV)</label>
+                <input type="file" id="csv-file-upload" accept=".csv">
+                <small style="color: var(--text-dim); display: block; margin-top: 0.3rem;">Must include numerical features like cost, competitor prices, and sales.</small>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="price-material-cost">Material Cost ($)</label>
+                  <input type="number" id="price-material-cost" step="0.1" value="4.90" required>
+                </div>
+                <div class="form-group">
+                  <label for="price-labor-hours">Labor Hours (per unit)</label>
+                  <input type="number" id="price-labor-hours" step="0.1" value="0.6" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="price-competitor-price">Competitor Avg Price ($)</label>
+                  <input type="number" id="price-competitor-price" step="0.5" value="25.00" required>
+                </div>
+                <div class="form-group">
+                  <label for="price-photo-count">Number of Photos</label>
+                  <input type="number" id="price-photo-count" step="1" value="6" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="price-season-q4">Q4 / Holiday Season?</label>
+                  <select id="price-season-q4">
+                    <option value="1">Yes (Q4 Peak Season)</option>
+                    <option value="0">No (Standard Season)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="price-free-shipping">Offer Free Shipping?</label>
+                  <select id="price-free-shipping">
+                    <option value="1">Yes (Built into Price)</option>
+                    <option value="0">No (Buyer Pays Shipping)</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-success btn-block" id="btn-predict-pricing">
+                <span>📊 Predict Optimal Price with TabPFN</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Right: TabPFN Predictions & Elasticity Curve -->
+          <div class="glass-panel" id="pricing-output-section">
+            <div class="panel-header">
+              <h2 class="panel-title"><span>📈</span> Predictive Yield & Margin Forecast</h2>
+              <div id="tabpfn-meta-info" class="badge">Engine: TabPFN-3.5 Prior Labs</div>
+            </div>
+
+            <div id="tabpfn-note-banner" style="display: none; background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 0.75rem 1rem; border-radius: var(--radius-sm); font-size: 0.82rem; margin-bottom: 1.25rem; color: #c084fc;">
+            </div>
+
+            <!-- KPI Metric Cards -->
+            <div class="metrics-row">
+              <div class="metric-card highlight">
+                <span class="metric-label">Recommended Price</span>
+                <span class="metric-value" id="metric-optimal-price">$24.50</span>
+                <span class="metric-sub">Sweet spot yield</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-label">Est. Monthly Units</span>
+                <span class="metric-value" id="metric-units-sold">165 units/mo</span>
+                <span class="metric-sub">Conversion adjusted</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-label">Projected Revenue</span>
+                <span class="metric-value" id="metric-revenue">$4,042.50</span>
+                <span class="metric-sub">Gross monthly</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-label">Profit & Margin</span>
+                <span class="metric-value" id="metric-margin">48.2%</span>
+                <span class="metric-sub" id="metric-sub-margin">Net after labor & materials</span>
+              </div>
+            </div>
+
+            <!-- Price Elasticity Simulation Table -->
+            <div class="output-card">
+              <div class="output-card-title">
+                <span>Price Elasticity Simulation (Demand vs Margin)</span>
+                <span style="font-size: 0.78rem; text-transform: none; color: var(--text-dim);">TabPFN Prior Evaluation</span>
+              </div>
+              <div class="elasticity-table-container">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Price Point</th>
+                      <th>Delta</th>
+                      <th>Est. Units Sold</th>
+                      <th>Projected Revenue</th>
+                      <th>Projected Profit</th>
+                    </tr>
+                  </thead>
+                  <tbody id="elasticity-table-body">
+                    <tr><td>$17.15</td><td>-30%</td><td>235 units</td><td>$4,030.25</td><td style="color:#f43f5e">-$230.00</td></tr>
+                    <tr><td>$22.05</td><td>-10%</td><td>185 units</td><td>$4,079.25</td><td style="color:#34d399">+$820.00</td></tr>
+                    <tr class="recommended-row"><td><strong>$24.50</strong> <span class="badge pulse-emerald">Recommended</span></td><td>0%</td><td>165 units</td><td>$4,042.50</td><td style="color:#34d399">+$1,950.00</td></tr>
+                    <tr><td>$26.95</td><td>+10%</td><td>135 units</td><td>$3,638.25</td><td style="color:#34d399">+$1,820.00</td></tr>
+                    <tr><td>$29.40</td><td>+20%</td><td>95 units</td><td>$2,793.00</td><td style="color:#34d399">+$1,410.00</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Historical Anomaly Detection -->
+            <div class="output-card" style="margin-bottom: 0;">
+              <div class="output-card-title">
+                <span>Shop Anomaly Detector (Underpriced Products Flagged)</span>
+              </div>
+              <div id="anomalies-list-container">
+                <div style="padding: 0.5rem 0; font-size: 0.85rem; color: var(--text-muted);">
+                  Analyzing tabular rows for sub-optimal margin items...
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 3: VOICE PROMO STUDIO (ELEVENLABS) -->
+      <section id="tab-voice" class="tab-content">
+        <div class="dashboard-grid">
+          <!-- Left: Voice Studio Form -->
+          <div class="glass-panel">
+            <div class="panel-header">
+              <h2 class="panel-title"><span>🎙️</span> Voice Promo Generator</h2>
+              <span class="badge pulse-amber">ElevenLabs Audio</span>
+            </div>
+
+            <form id="voice-studio-form">
+              <div class="form-group">
+                <label for="voice-preset-select">Voice Persona</label>
+                <select id="voice-preset-select">
+                  <option value="warm_artisan">Rachel (Warm & Authentic Artisan)</option>
+                  <option value="luxury_commercial">Adam (Deep & Sleek Luxury)</option>
+                  <option value="upbeat_creator">Bella (Energetic Social Creator)</option>
+                  <option value="vintage_storyteller">Antoni (Vintage & Heirloom Narration)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="voice-script-input">Promo Narration Script (15s-30s Short-Form Video)</label>
+                <textarea id="voice-script-input" rows="5" required>Stop scrolling if you’re obsessed with cozy botanical scents! Every single Amber & Oakmoss candle is hand-poured in small batches using 100% natural soy wax and crackling wooden wicks. Tap the shop link to grab yours before this holiday batch sells out!</textarea>
+                <small style="color: var(--text-dim); display: block; margin-top: 0.3rem;">
+                  Pro-tip: Keep scripts under 45 words for high-retention TikTok, Reels, and YouTube Shorts hooks.
+                </small>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="btn-generate-voice">
+                <span>🎙️ Generate High-Definition Promo Voice</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Right: Audio Player & Waveform -->
+          <div class="glass-panel">
+            <div class="panel-header">
+              <h2 class="panel-title"><span>🔊</span> Social Audio Player & Export</h2>
+              <div id="voice-meta-info" class="badge">Engine: Ready</div>
+            </div>
+
+            <div class="output-card">
+              <div class="output-card-title">
+                <span>Studio Audio Preview</span>
+              </div>
+
+              <!-- Animated Waveform Visualizer -->
+              <div class="waveform-viz" id="waveform-visualizer">
+                <div class="wave-bar" style="height: 25%;"></div>
+                <div class="wave-bar" style="height: 60%;"></div>
+                <div class="wave-bar" style="height: 40%;"></div>
+                <div class="wave-bar" style="height: 90%;"></div>
+                <div class="wave-bar" style="height: 70%;"></div>
+                <div class="wave-bar" style="height: 35%;"></div>
+                <div class="wave-bar" style="height: 85%;"></div>
+                <div class="wave-bar" style="height: 50%;"></div>
+                <div class="wave-bar" style="height: 75%;"></div>
+                <div class="wave-bar" style="height: 30%;"></div>
+                <div class="wave-bar" style="height: 95%;"></div>
+                <div class="wave-bar" style="height: 65%;"></div>
+                <div class="wave-bar" style="height: 40%;"></div>
+                <div class="wave-bar" style="height: 80%;"></div>
+                <div class="wave-bar" style="height: 55%;"></div>
+                <div class="wave-bar" style="height: 20%;"></div>
+              </div>
+
+              <div id="audio-player-container" style="margin-top: 1rem;">
+                <div style="display: flex; gap: 0.75rem;">
+                  <button type="button" class="btn btn-success" id="btn-play-audio" style="flex: 1;">
+                    ▶️ Play Narration
+                  </button>
+                  <button type="button" class="btn btn-outline" id="btn-download-audio" style="display: none;">
+                    ⬇️ Download MP3
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="output-card">
+              <div class="output-card-title">
+                <span>How Indie Sellers Use This Voiceover</span>
+              </div>
+              <ul style="padding-left: 1.2rem; font-size: 0.88rem; color: var(--text-muted); line-height: 1.7;">
+                <li><strong>CapCut & InShot</strong>: Import the generated MP3 as background audio over raw studio making-of footage.</li>
+                <li><strong>TikTok & Instagram Reels</strong>: High-energy voiceover hooks consistently increase watch time and conversion rates by 3.4x.</li>
+                <li><strong>Zero Studio Gear Needed</strong>: No microphones or sound treatment required—perfect for quiet late-night packing sessions.</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 4: WHY OPEN INNOVATION MATTERS -->
+      <section id="tab-open-innovation" class="tab-content">
+        <div class="glass-panel" style="max-width: 1000px; margin: 0 auto;">
+          <div class="panel-header">
+            <h2 class="panel-title"><span>💡</span> Why Open Innovation Matters for Side-Hustlers</h2>
+            <span class="badge pulse-purple">Hacktoberfest Week 2</span>
+          </div>
+
+          <div style="font-size: 0.95rem; line-height: 1.8; color: var(--text-main);">
+            <p style="margin-bottom: 1.2rem;">
+              When running a side hustle or solo business, margins are razor-thin. Mass-market closed AI APIs charge per token, lock you into sudden price hikes, and send confidential supplier costs, wholesale bills, and unreleased designs to centralized corporate servers.
+            </p>
+
+            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin: 1.5rem 0 0.6rem 0; color: #c084fc;">
+              1. Zero Token Tax: Preserving Fragile Margins
+            </h3>
+            <p style="color: var(--text-muted); margin-bottom: 1.2rem;">
+              A small artisan selling 150 items a month with dozens of inventory revisions cannot afford $0.05–$0.20 per API call or monthly subscriptions that eat 10% of their profit. By running <strong>Gemma 2 open weights</strong> locally or self-hosting on affordable platforms like <strong>Render</strong>, the marginal cost per listing is effectively <strong>$0.00</strong>.
+            </p>
+
+            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin: 1.5rem 0 0.6rem 0; color: #34d399;">
+              2. Absolute Privacy: Confidential Wholesale & Supply Chains
+            </h3>
+            <p style="color: var(--text-muted); margin-bottom: 1.2rem;">
+              Indie makers guard their material suppliers, wholesale rates, and exact labor costs fiercely. Closed models ingest this data into proprietary training pipelines. With HustlePulse AI running open models on-device or in private containers, <strong>financial data never leaves the seller's control</strong>.
+            </p>
+
+            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin: 1.5rem 0 0.6rem 0; color: #fbbf24;">
+              3. Tabular Foundation Models (TabPFN): Real Micro-SaaS Analytics Without Big Tech AutoML
+            </h3>
+            <p style="color: var(--text-muted); margin-bottom: 1.2rem;">
+              Most e-commerce data is tabular (CSVs of orders, costs, clicks, and margins). Traditional machine learning requires heavy pipelines, hyperparameter tuning, and massive compute. <strong>TabPFN-3.5</strong> from Prior Labs brings instant, in-context Bayesian prior inference to small datasets—enabling instant price elasticity forecasting on 20 rows of sales data in milliseconds.
+            </p>
+
+            <div class="metrics-row" style="margin-top: 2rem;">
+              <div class="metric-card">
+                <span class="metric-label">Closed API Cost (1,000 listings)</span>
+                <span class="metric-value" style="color: #f43f5e;">$150+/yr</span>
+                <span class="metric-sub">Token fees & subscription</span>
+              </div>
+              <div class="metric-card highlight">
+                <span class="metric-label">HustlePulse (Open AI)</span>
+                <span class="metric-value" style="color: #34d399;">$0.00</span>
+                <span class="metric-sub">Unlimited local generations</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Toast Notification Element -->
+    <div id="toast-notification"></div>
+
+    <!-- Footer -->
+    <footer style="margin-top: 3.5rem; text-align: center; color: var(--text-dim); font-size: 0.85rem;">
+      <p>HustlePulse AI • Built for the Hacktoberfest Open-Source AI Challenge: Week 2 (Side Hustle)</p>
+      <p style="margin-top: 0.25rem;">Powered by Google Gemma, Prior Labs TabPFN, and ElevenLabs • MIT Licensed</p>
+    </footer>
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
